@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+<div class="card" style="width: 18rem;">
+    <form method="POST">
+        {% csrf_token %}
+        <label for="title"></label>
+        <input id="title" placeholder="Title" name="title"> <br>
+
+        <label for="description"></label>
+        <input id="description" placeholder="Description" name="description"><br>
+
+        <label for="price"></label>
+        <input id="price" placeholder="Price" name="price">
+
+        <label for="image"></label>
+        <input id="image" placeholder="Image" name="image" type="file">
+
+        <label for="reyting"></label>
+        <input id="reyting" placeholder="reyting" name="reyting" ><br> <br> <br>
+
+        <button type="submit" class="btn btn-outline-primary">Add courses </button>
+
+    </form>
+
+</div>
+
+{% endblock %}
